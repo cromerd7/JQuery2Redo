@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style type="text/css">
+* {* {
+	font-family: georgia;
+}
+
+ .aboutMe{
+	color: #1773de;
+	width: 100%;
+	padding: 10px;
+	background-color: #ccc;
+	box-sizing: border-box;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+section{
+	border: 2px solid black;
+}
+.aboutMe:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.expVal{
+	float: right;
+}
+
+.aboutMEcontent{
+	padding: 10px;
+}
+
+#myBackground{
+  width: 200px;
+  height: 200px;
+  background-color: #F2D7D5
+}
+
+#backgroundContent{width: 200px;
+  height: 200px;
+  background-color: green;
+}
+
+#date{
+  width: 25%;
+  height: 100px;
+  background-color: black;
+  color: white;
+  line-height: 200px;
+  text-align: center;
+  font-color: black;
+  font-family: georgia;}
+
+
+body{font-size: 10px;
+  font-color: black;
+  
+}
+
+p1{font-size: 2em;
+    
+}
+
+
+</style>
+<script>
+$( document ).ready( function(){
+  $( "body" ).css("font-family", "georgia");
+  
+  $('.b').click( function(){
+    $("#myName").css("color", "green");
+  });
+  
+    $('.r').click( function(){
+    $("#myName").css("color", "yellow");
+  });
+  
+    $('.bl').click( function(){
+    $("#myName").css("color", "blue");
+  });
+
+$( document ).ready(function(){
+	$(".aboutMecontent").hide();
+  
+  $(".aboutME").on("click", function(){
+	if ($(this).children(".expVal").text() === "+"){
+	$(this).children(".expVal").text("-");
+	}
+	else {
+	$(this).children(".expVal").text("+");
+	};
+    
+   $(this).parent().children(".aboutMecontent").toggle();
+	});
+	
+	$(".aboutMe").on("mouseenter", function(){
+	if ($(this).children(".expVal").text() === "+"){
+	$(this).attr("title", "Click to Expand");
+	}
+	else {
+	$(this).attr("title", "Click to Contract");
+	};
+
+	$( document ).ready(function() {
+  $("#myBackground").hover( 
+        function() {
+    $( this ).css("background-color", "F").text("Your mouse is hovering on me!");
+  F2D7D5},
+     function(){
+    $( this ).css("background-color", "green").text("Hover your mouse over me!")
+  }
+  );
+
+  $('#date').datepicker ({dateFormat: 'mm/dd/yy'});
+});
+	
+</script>
+<body>
+
+<p>Click the buttons to change the color of the words "My Name is James!"</p>
+<h1 id="myName">My Name is James!</h1>
+<button class="b">Green</button>
+<button class="r">Yellow</button>
+<button class="bl">Blue</button>
+	
+<section>
+<h1 class="aboutMe">About Me<span class="expVal">+</span></h1>
+<p class="aboutMEcontent">My name is James Cromer. This is my second semester at Cleveland Community College, majoring in Web Design. I love it so far!</p>
+</section>
+
+<div id="myBackground">My background is in Art, also I have a love for technology. Therefore, I combined the two and decided to major in Web Design at CCC. </div>
+
+<input id="date" type="text" size="100"/><p1>Choose a date you would like to meet for this class assigment.</p1>
+
+
+
+
+
+</body></head></html>
+
